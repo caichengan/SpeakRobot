@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cca.speakrobot.MainActivity" >
+
+    <RelativeLayout 
+        android:id="@+id/bottom_speak"
+          android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/bottom_bar"
+        >
+    <Button
+        android:id="@+id/btn_speak_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_voice_search_normal"
+        android:textSize="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+		android:onClick="clickListen"
+        android:text="开始说话" />
+
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/list_speak"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+        android:layout_above="@id/bottom_speak"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:layout_height="match_parent">
+        
+    </ListView>
+</RelativeLayout>
